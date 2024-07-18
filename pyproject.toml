@@ -4,12 +4,17 @@
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[tool.hatch]
+version.path = "src/example_package_misael/__init__.py"
+
 [project]
+dynamic = ["version"]
 name = "example-package-misael"
-version = "0.1.0"
+#version = "0.1.0"
 dependencies = [
   "numpy"
 ]
 
 [project.optional-dependencies]
 test = ["pytest"]
+
